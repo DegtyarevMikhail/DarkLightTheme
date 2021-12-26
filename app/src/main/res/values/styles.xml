@@ -16,7 +16,7 @@
 
     </style>
 
-    <style name="MyCoolStyle" parent="AppTheme">
+    <style name="MyCoolStyle" parent="AppTheme"><!--  AppTheme        -->
         <item name="android:textSize">@dimen/textSize</item>
         <item name="android:textColor">@color/design_default_color_primary</item>
         <item name="android:layout_marginStart">@dimen/margin</item>
@@ -24,18 +24,29 @@
         <item name="android:layout_marginTop">@dimen/margin</item>
         <item name="android:fontFamily">casual</item>
         <item name="android:textStyle">italic</item>
+        <item name="android:layout_width">@dimen/calc_button_width</item>
+        <item name="android:layout_height">@dimen/calc_button_height</item>
+        <item name="cornerRadius">26dp</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="strokeColor">#6EBE11</item>
 
     </style>
 
     <style name="AppThemeLight" parent="Theme.MaterialComponents.Light">
-        <item name="colorPrimary">#AF7114</item>
+        <item name="colorPrimary">#1BBA95</item>
         <item name="colorPrimaryDark">#84E811</item>
         <item name="colorAccent">#899515</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="strokeColor">#D3BF12</item>
+        <item name="cornerRadius">26dp</item>
     </style>
 
     <style name="AppThemeDark" parent="Theme.MaterialComponents">
         <item name="strokeWidth">3dp</item>
         <item name="strokeColor">#3A0A8E</item>
+        <item name="cornerRadius">26dp</item>
+        <item name="android:textColor">#2A1A45</item>
+        <item name="android:background">@drawable/sword</item>
     </style>
 
 

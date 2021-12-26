@@ -11,7 +11,7 @@
         android:text="0"
         android:background="#ddd"
         android:textSize="32sp"
-        android:id="@+id/display1"
+        android:id="@+id/display"
         android:singleLine="true"
         android:ellipsize="none"
         android:maxLength="11"/>
@@ -23,53 +23,53 @@
         android:text="0"
         android:background="#ddd"
         android:textSize="32sp"
-        android:id="@+id/display"
+        android:id="@+id/display2"
         android:singleLine="true"
         android:ellipsize="none"
         android:maxLength="11"
-        android:layout_below="@+id/display1"/>
+        android:layout_below="@+id/display"/>
 
     <LinearLayout
         android:id="@+id/vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/display"
-        android:orientation="vertical">
+        android:layout_below="@+id/display2"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/row0"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_7"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:text="@string/_7" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:text="@string/_8" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:text="@string/_9" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/divide"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:text="@string/divide" />
         </LinearLayout>
 
@@ -78,7 +78,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_4"
@@ -114,7 +114,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_3"
@@ -150,7 +150,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
 
             <com.google.android.material.button.MaterialButton
@@ -175,14 +175,7 @@
                 android:text="+" />
 
         </LinearLayout>
-<!--
-        <RadioGroup
-            android:id="@+id/row4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"/>
--->
+
         <RadioGroup
             android:id="@+id/radioButtons"
             android:layout_width="wrap_content"
@@ -216,9 +209,5 @@
         </RadioGroup>
     </LinearLayout>
 
+
 </RelativeLayout>
-
-
-
-
-

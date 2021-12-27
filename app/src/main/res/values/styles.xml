@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/purple_200</item>
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">70dp</item>
         <item name="rippleColor">#15BFAF</item>
@@ -33,20 +33,21 @@
     </style>
 
     <style name="AppThemeLight" parent="Theme.MaterialComponents.Light">
-        <item name="colorPrimary">#1BBA95</item>
-        <item name="colorPrimaryDark">#84E811</item>
-        <item name="colorAccent">#899515</item>
+        <item name="colorPrimary">#83EC09</item>
+        <item name="colorPrimaryDark">#2494C6</item>
+        <item name="colorAccent">#CE43E6</item>
         <item name="strokeWidth">3dp</item>
-        <item name="strokeColor">#D3BF12</item>
+        <item name="strokeColor">#D33D0D</item>
         <item name="cornerRadius">26dp</item>
     </style>
 
     <style name="AppThemeDark" parent="Theme.MaterialComponents">
         <item name="strokeWidth">3dp</item>
-        <item name="strokeColor">#3A0A8E</item>
+        <item name="strokeColor">#4809B8</item>
         <item name="cornerRadius">26dp</item>
-        <item name="android:textColor">#2A1A45</item>
+        <item name="android:textColor">#1F054A</item>
         <item name="android:background">@drawable/sword</item>
+
     </style>
 
 

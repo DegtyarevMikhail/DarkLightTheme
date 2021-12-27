@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
-    <TextView
+
+
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="@string/display1"
         android:background="#ddd"
-        android:textSize="32sp"
+        android:textSize="36sp"
         android:id="@+id/display1"
         android:singleLine="true"
         android:ellipsize="none"
         android:maxLength="11"/>
 
 
-    <TextView
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="@string/display2"
         android:background="#ddd"
-        android:textSize="32sp"
-        android:id="@+id/display"
+        android:textSize="36sp"
+        android:id="@+id/display2"
         android:singleLine="true"
         android:ellipsize="none"
         android:maxLength="11"
@@ -33,7 +37,8 @@
         android:id="@+id/vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/display"
+        android:layout_below="@+id/display2"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <LinearLayout
@@ -66,7 +71,7 @@
                 android:text="@string/_9" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/divide"
+                android:id="@+id/key_divide"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -102,7 +107,7 @@
                 android:text="@string/_6" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/multiply"
+                android:id="@+id/key_multiply"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -138,7 +143,7 @@
                 android:text="@string/_1" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/subtract"
+                android:id="@+id/key_subtract"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -161,32 +166,43 @@
                 android:text="@string/decimal" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/equals"
+                android:id="@+id/key_equals"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/equals" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/add"
+                android:id="@+id/key_add"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="+" />
+                android:text="@string/plus" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/key_0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/_0" />
 
         </LinearLayout>
-<!--
-        <RadioGroup
-            android:id="@+id/row4"
-            android:layout_width="match_parent"
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_C"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/calc_button_key_C"
             android:layout_weight="1"
-            android:orientation="vertical"/>
--->
+            android:text="@string/c" />
+
+
         <RadioGroup
             android:id="@+id/radioButtons"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/calc_button_height">
 
 
             <com.google.android.material.radiobutton.MaterialRadioButton
@@ -214,6 +230,7 @@
                 android:text="@string/material_dark" />
 
         </RadioGroup>
+
     </LinearLayout>
 
 </RelativeLayout>

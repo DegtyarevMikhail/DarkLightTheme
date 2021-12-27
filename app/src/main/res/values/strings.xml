@@ -22,5 +22,9 @@
     <string name="subtract">-</string>
     <string name="decimal">.</string>
     <string name="equals">=</string>
+    <string name="c">C</string>
+    <string name="plus">+</string>
+    <string name="display2">0</string>
+    <string name="display1">0</string>
 
 </resources>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin">5dp</dimen>
+    <dimen name="margin">2dp</dimen>
     <dimen name="textSize">25sp</dimen>
     <dimen name="calc_button_width">80dp</dimen>
-    <dimen name="calc_button_height">70dp</dimen>
+    <dimen name="calc_button_height">60dp</dimen>
+    <dimen name="calc_button_key_C">300dp</dimen>
+
 
 </resources>

@@ -1,14 +1,21 @@
 package com.example.darklighttheme;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
+import androidx.annotation.NonNull;
+
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
+import java.util.logging.LogManager;
+
 public class MainActivity extends BaseActivity {
+    private final static String KeyStorage = "KeyStorage";
+    Storage data = new Storage();
 
     private EditText display1;
     private EditText display2;
@@ -35,8 +42,9 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         initThemeChooser();
 
+
         display1 = (EditText) findViewById(R.id.display1);
-        display2 = (EditText) findViewById(R.id.display2);
+      //  display2 = (EditText) findViewById(R.id.display2);
         key0 = findViewById(R.id.key_0);
         key1 = findViewById(R.id.key_1);
         key2 = findViewById(R.id.key_2);
@@ -54,6 +62,12 @@ public class MainActivity extends BaseActivity {
         keyEquals = findViewById(R.id.key_equals);
         keyC = findViewById(R.id.key_C);
 
+        if (savedInstanceState != null  && savedInstanceState.containsKey(KeyStorage))
+        {
+
+            data = savedInstanceState.getParcelable(KeyStorage);
+        }
+/*
         key0.setOnClickListener(view -> display1.setText("0"));
         key1.setOnClickListener(view -> display1.setText("1"));
         key2.setOnClickListener(view -> display1.setText("2"));
@@ -64,17 +78,17 @@ public class MainActivity extends BaseActivity {
         key7.setOnClickListener(view -> display1.setText("7"));
         key8.setOnClickListener(view -> display1.setText("8"));
         key9.setOnClickListener(view -> display1.setText("9"));
-        keyAdd.setOnClickListener(view -> display2.setText("+"));
-        keySubtract.setOnClickListener(view -> display2.setText("-"));
-        keyDivide.setOnClickListener(view -> display2.setText("/"));
-        keyMultiply.setOnClickListener(view -> display2.setText("*"));
-        keyEquals.setOnClickListener(view -> display2.setText("="));
+        keyAdd.setOnClickListener(view -> display1.setText("+"));
+        keySubtract.setOnClickListener(view -> display1.setText("-"));
+        keyDivide.setOnClickListener(view -> display1.setText("/"));
+        keyMultiply.setOnClickListener(view -> display1.setText("*"));
+        keyEquals.setOnClickListener(view -> display1.setText("="));
         keyC.setOnClickListener(view -> {
             display1.setText("");
-            display2.setText("");
 
         });
 
+*/
 
     }
 
@@ -104,4 +118,11 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState){
+        outState.putParcelable(KeyStorage, data);
+        super.onSaveInstanceState(outState);
+
+    }
+
 }

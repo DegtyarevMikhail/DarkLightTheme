@@ -11,8 +11,6 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/display1"
-        android:background="#ddd"
         android:textSize="36sp"
         android:id="@+id/display1"
         android:singleLine="true"
@@ -24,8 +22,6 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/display2"
-        android:background="#ddd"
         android:textSize="36sp"
         android:id="@+id/display2"
         android:singleLine="true"

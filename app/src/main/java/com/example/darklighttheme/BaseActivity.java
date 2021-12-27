@@ -2,10 +2,15 @@ package com.example.darklighttheme;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.button.MaterialButton;
+
 public abstract class BaseActivity extends AppCompatActivity {
+
 
     // Имя настроек
     private static final String NameSharedPreference = "LOGIN";
@@ -21,9 +26,12 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Устанавливать тему надо только до установки макета активити
         setTheme(getAppTheme(R.style.MyCoolStyle));
+
     }
+
 
     private int getAppTheme(int codeStyle) {
         return codeStyleToStyleId(getCodeStyle(codeStyle));
@@ -58,5 +66,8 @@ public abstract class BaseActivity extends AppCompatActivity {
                 return R.style.MyCoolStyle;
         }
     }
+
+
+
 }
 

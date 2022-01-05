@@ -1,75 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:background="#ddd"
-        android:textSize="32sp"
-        android:id="@+id/display"
-        android:singleLine="true"
-        android:ellipsize="none"
-        android:maxLength="11"/>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:background="#ddd"
-        android:textSize="32sp"
-        android:id="@+id/display2"
-        android:singleLine="true"
-        android:ellipsize="none"
-        android:maxLength="11"
-        android:layout_below="@+id/display"/>
-
+    android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/display2"
-        android:orientation="horizontal">
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/row00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/display1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#9E86F4"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_weight="3"
+                />
+
+            <EditText
+                android:id="@+id/display2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Result"
+                android:textColor="#9E86F4"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_weight="3"
+                />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/row0"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_7"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 android:text="@string/_7" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 android:text="@string/_8" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 android:text="@string/_9" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/divide"
+                android:id="@+id/key_divide"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 android:text="@string/divide" />
         </LinearLayout>
 
@@ -78,7 +85,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_4"
@@ -102,7 +109,7 @@
                 android:text="@string/_6" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/multiply"
+                android:id="@+id/key_multiply"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -114,7 +121,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/key_3"
@@ -138,7 +145,7 @@
                 android:text="@string/_1" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/subtract"
+                android:id="@+id/key_subtract"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -150,7 +157,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
 
             <com.google.android.material.button.MaterialButton
@@ -161,26 +168,42 @@
                 android:text="@string/decimal" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/equals"
+                android:id="@+id/key_equals"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/equals" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/add"
+                android:id="@+id/key_add"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="+" />
+                android:text="@string/plus" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/key_0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/_0" />
 
         </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="@dimen/calc_button_key_C"
+            android:layout_weight="1"
+            android:text="@string/c" />
+
 
         <RadioGroup
             android:id="@+id/radioButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
 
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/radioButtonMyCoolStyle"
@@ -207,7 +230,7 @@
                 android:text="@string/material_dark" />
 
         </RadioGroup>
+
     </LinearLayout>
 
-
-</RelativeLayout>
+</LinearLayout>

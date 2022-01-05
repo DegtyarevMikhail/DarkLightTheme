@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
-
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="36sp"
-        android:id="@+id/display1"
-        android:singleLine="true"
-        android:ellipsize="none"
-        android:maxLength="11"/>
-
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="36sp"
-        android:id="@+id/display2"
-        android:singleLine="true"
-        android:ellipsize="none"
-        android:maxLength="11"
-        android:layout_below="@+id/display1"/>
-
+    android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/vertical"
         android:layout_width="match_parent"
@@ -36,6 +10,38 @@
         android:layout_below="@+id/display2"
         android:layout_weight="1"
         android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/row00"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/display1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#9E86F4"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
+
+            <EditText
+                android:id="@+id/display2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result"
+                android:textColor="#9E86F4"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/row0"
@@ -229,9 +235,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
-
-
-
-
-
+</LinearLayout>
